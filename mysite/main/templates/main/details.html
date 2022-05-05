@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>destination</title>
+   <style tyle="text/css">
+      @font-face {
+         font-family: "GmarketSansBold";
+         src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format('woff');
+         font-weight: normal;
+         font-style: normal;
+      }
+      @font-face {
+         font-family: "NEXON Lv1 Gothic OTF";
+         src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+            format("woff");
+         font-weight: normal;
+         font-style: normal;
+      }
+      body {
+            color: #000;
+            font-family: "NEXON Lv1 Gothic OTF";
+        }
+        .headA_logo {
+            text-align: center;
+        }
+        .headA_logo img {
+            width: 200px;
+        }
+        .Contents {
+         text-align: center;
+        }
+        .images{
+            width: 100%;
+        }
+        .destination_name {
+            margin-top: 50px;
+            font-weight: bold;
+            font-size: 170%;
+        }
+        .destination_content {
+            margin-top: 30px;
+            font-size: 150%;
+        }
+        .destination_wiki {
+            margin-top: 30px;
+            font-size: 150%;
+        }
+      
+   </style>
+</head>
+<body>
+   {% load static %}
+   <header>
+      <div class="headA">
+         <div class="headA_logo">
+            <a href="/">
+               <img src="{% static 'images/logo.png' %}" alt="">
+            </a>
+         </div>
+      </div>      
+   </header>
+  {% load static %}
+    {% if destination %} 
+      <div class="Contents">
+         <img class="images" src="{{ destination.main_pic }}" alt="">
+         <p class="destination_name">{{ destination.name }}</p>
+         <p class="destination_content">{{ destination.content }}</p>
+         <a href="{{ destination.wiki }}" target="_balnk">
+            <p class="destination_wiki">{{ destination.wiki }}</p>
+         </a>
+      </div>
+    {% endif %}
+    <div class="livere">
+            <!-- 라이브리 시티 설치 코드 -->
+      <div id="lv-container" data-id="city" data-uid="MTAyMC81NTYyNy8zMjA5NA==">
+         <script type="text/javascript">
+         (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+         })(document, 'script');
+         </script>
+      <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+      </div>
+      <!-- 시티 설치 코드 끝 -->
+    </div>
+    <footer>
+        
+   </footer>
+</body>
+</html>

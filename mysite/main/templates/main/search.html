@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이랑 나들이</title>
+</head>
+<body>
+    {% block content %}
+        {% if search_list %}
+            {% for search in search_list %}
+            <div class="container"> 
+                <a href="{{ search.pk }}" style="text-decoration:none">
+                    <p>{{ search.name }}</p>
+                    <p>{{ search.content }}</p>
+                    <img src="{{ search.main_pic }}" alt="">
+                </a>
+
+            </div>
+            {% endfor %}
+        {% endif %}
+    {% endblock %}
+    
+</body>
+</html>

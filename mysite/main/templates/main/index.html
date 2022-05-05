@@ -1,0 +1,464 @@
+<html>
+<head>
+   <title>아이랑 나들이</title>
+   <style tyle="text/css">
+      
+
+@font-face {
+    font-family: "GmarketSansBold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+ }
+ @font-face {
+    font-family: "NEXON Lv1 Gothic OTF";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+       format("woff");
+    font-weight: normal;
+    font-style: normal;
+ }
+ body {
+    width: 100%;
+    color: #000;
+    font-family: "NEXON Lv1 Gothic OTF";
+ }
+ .headA_logo {
+    text-align: center;
+ }
+ .headA_logo img {
+    width: 150px;
+ }
+ .headA_recommend_1_btn:hover {
+    opacity: 0.7;
+ }
+ .headA_recommend_1_img img {
+    position: absolute;
+    left: 24%;
+    width: 500px;
+ }
+ .headA_recommend_1_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 30px;
+    margin-top: 5%;
+    position: absolute;
+    width: 210px;
+    height: 40px;
+    left: 35%;
+    top: 380px;
+
+    background: rgba(32, 32, 32, 0.4);
+    backdrop-filter: blur(4px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 30px;
+ }
+ .submit_1 {
+    text-align: center;
+    font-size: 120%;
+    font-weight : bold;
+ }
+ .headA_recoeemnd_1_tag_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 6px;
+    position: absolute;
+    left: 30%;
+    top: 500px;
+    font-size: 100%;
+    border: 1px solid #F5F5F5;
+    box-sizing: border-box;
+    border-radius: 20px;
+ }
+ .bodyA {
+    width: 100%;
+    text-align: center;
+ }
+ .bodyA_text {
+    position: absolute;
+    width: 400px;
+    height: 35px;
+    top: 680px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 180%;
+    font-weight : bold;
+    line-height: 18px;
+    text-align: center;
+    left :275px;
+ }
+ .theme_park {
+    width: 100%;
+    text-align: center;
+ }
+ .theme_park_pic img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 15%;
+    top: 750px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ .theme_park_text {
+   position: absolute;
+   font-size: 180%;
+    width: 165px;
+    height: 165px;
+    left: 205px;
+    top: 1055px;
+ }
+ .building_tower {
+    width: 100%;
+    text-align: center;
+ }
+ .building_tower_pic img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 500px;
+    top: 750px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ .building_tower_text {
+   position: absolute;
+   font-size: 180%;
+    width: 165px;
+    height: 165px;
+    left: 560px;
+    top: 1055px;
+ }
+
+ .mountain {
+    width: 100%;
+    text-align: center;
+ }
+ .mountain_pic img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 15%;
+    top: 1100px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ .mountain_text {
+   position: absolute;
+   font-size: 180%;
+    width: 165px;
+    height: 165px;
+    left: 205px;
+    top: 1405px;
+ }
+ .historical_site {
+    width: 100%;
+    text-align: center;
+ }
+ .historical_site_pic img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 500px;
+    top: 1100px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ .historical_site_text {
+   position: absolute;
+   font-size: 180%;
+    width: 165px;
+    height: 165px;
+    left: 560px;
+    top: 1405px;
+ }
+ .park {
+    width: 100%;
+    text-align: center;
+ }
+ .park_pic img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 15%;
+    top: 1450px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ .park_text {
+   position: absolute;
+   font-size: 180%;
+    width: 165px;
+    height: 165px;
+    left: 205px;
+    top: 1755px;
+ }
+ .shopping {
+    width: 100%;
+    text-align: center;
+ }
+ .shopping_pic img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 500px;
+    top: 1450px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ .shopping_text {
+   position: absolute;
+   font-size: 180%;
+    width: 165px;
+    height: 165px;
+    left: 560px;
+    top: 1755px;
+ }
+ .bodyB_text {
+    position: absolute;
+    width: 400px;
+    height: 35px;
+    top: 1900px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 180%;
+    font-weight : bold;
+    line-height: 18px;
+    text-align: center;
+    left :275px;
+ }
+ .in {
+    width: 100%;
+    text-align: center;
+ }
+ .in_pic img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 15%;
+    top: 1950px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ .in_text {
+   position: absolute;
+   font-size: 180%;
+    width: 200px;
+    height: 165px;
+    left: 205px;
+    top: 2255px;
+ }
+ .out {
+    width: 100%;
+    text-align: center;
+ }
+ .out_pic img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 500px;
+    top: 1950px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ .out_text {
+   position: absolute;
+   font-size: 180%;
+    width: 200px;
+    height: 165px;
+    left: 555px;
+    top: 2255px;
+ }
+ .free {
+    width: 100%;
+    text-align: center;
+ }
+ .free_pic img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 15%;
+    top: 2300px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ .free_text {
+   position: absolute;
+   font-size: 180%;
+    width: 500px;
+    height: 165px;
+    left: 55px;
+    top: 2605px;
+ }
+ .charge {
+    width: 100%;
+    text-align: center;
+ }
+ .charge_pic img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 500px;
+    top: 2300px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ .charge_text {
+   position: absolute;
+   font-size: 180%;
+    width: 200px;
+    height: 165px;
+    left: 555px;
+    top: 2605px;
+ }
+ .bodyA_txt {
+   position: absolute;
+    width: 400px;
+    height: 35px;
+    top: 2800px;
+    bottom: 500px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 180%;
+    font-weight : bold;
+    line-height: 18px;
+    text-align: center;
+    left :275px;
+ }
+ .bodyA_txt_full {
+   padding-bottom: 15px;
+ }
+      
+   </style>
+</head>
+<body>
+   {% load static %}
+   <header>
+      <div class="headA">
+         <div class="headA_logo">
+            <a href="/">
+               <img src="{% static 'images/logo.png' %}" alt="">
+            </a>
+         </div>
+         <div class="headA_recommend">
+            <div class="headA_recommend_1">
+               <div class="headA_recommend_1_img">
+                  <img src="{% static 'images/main_family.png' %}" alt="">
+               </div>
+               <div class="headA_recommend_1_btn">
+                  <div class="submit_1">
+                     <a href="/result/" method='post' style="text-decoration:none">나들이 장소 추천받기</a>
+                 </div>
+               </div>
+               <div class="headA_recoeemnd_1_tag">
+                  <div class="headA_recoeemnd_1_tag_1">
+                     # 오늘은 어디로?
+                  </div>
+               </div>
+            </div>            
+         </div>
+      </div>      
+   </header>
+   <div class="bodyA">
+      <div class="bodyA_text">
+         어디로 갈까?
+      </div>
+      <div class="theme_park">
+         <a href="/result_theme_park" style="text-decoration:none">
+            <div class="theme_park_pic">
+               <img src="{% static 'images/테마파크.png' %}" alt="">
+            </div>
+            <div class="theme_park_text">테마파크</div>
+         </a>
+      </div>
+      <div class="building_tower">
+         <a href="/result_building_tower" style="text-decoration:none">
+            <div class="building_tower_pic">
+               <img src="{% static 'images/빌딩&타워.png' %}" alt="">
+            </div>
+            <div class="building_tower_text">빌딩 & 타워</div>
+         </a>
+      </div>
+      <div class="mountain">
+         <a href="/result_mountain" style="text-decoration:none">
+            <div class="mountain_pic">
+               <img src="{% static 'images/산.png' %}" alt="">
+            </div>
+            <div class="mountain_text">산</div>
+         </a>
+      </div>
+      <div class="historical_site">
+         <a href="/result_historical_site" style="text-decoration:none">
+            <div class="historical_site_pic">
+               <img src="{% static 'images/역사유적지.png' %}" alt="">
+            </div>
+            <div class="historical_site_text">역사유적지</div>
+         </a>
+      </div>
+      <div class="park">
+         <a href="/result_park" style="text-decoration:none">
+            <div class="park_pic">
+               <img src="{% static 'images/공원.png' %}" alt="">
+            </div>
+            <div class="park_text">공원</div>
+         </a>
+      </div>
+      <div class="shopping">
+         <a href="/result_shopping" style="text-decoration:none">
+            <div class="shopping_pic">
+               <img src="{% static 'images/쇼핑.png' %}" alt="">
+            </div>
+            <div class="shopping_text">쇼핑</div>
+         </a>
+      </div>
+   </div>
+   <div class="bodyB">
+      <div class="bodyB_text">취향대로 나들이</div>
+      <div class="in">
+         <a href="/result_in" style="text-decoration:none">
+            <div class="in_pic">
+               <img src="{% static 'images/실내.png' %}" alt="">
+            </div>
+            <div class="in_text">실내에서 놀게요</div>
+         </a>
+      </div>
+      <div>
+         <div class="out">
+            <a href="/result_out" style="text-decoration:none">
+               <div class="out_pic">
+                  <img src="{% static 'images/야외.png' %}" alt="">
+               </div>
+               <div class="out_text">야외에서 놀게요</div>
+            </a>
+         </div>
+         <div class="free">
+            <a href="/result_free" style="text-decoration:none">
+               <div class="free_pic">
+                  <img src="{% static 'images/무료.png' %}" alt="">
+               </div>
+               <div class="free_text">무료인 곳으로 갈래요</div>
+            </a>
+         </div>
+         <div class="charge">
+            <a href="/result_charge" style="text-decoration:none">
+               <div class="charge_pic">
+                  <img src="{% static 'images/유료.png' %}" alt="">
+               </div>
+               <div class="charge_text">입장료가 있어도 괜찮아요</div>
+            </a>
+         </div>
+      </div>
+      <div class="bodyA_txt">
+         <a class="bodyA_txt_full" href="/result_full" style="text-decoration:none">전체 장소 둘러보기</a>
+      </div>
+   </div>
+   <div class="container">
+      {% block content %}
+      {% endblock %}
+   </div>
+   
+
+   
+   
+</body>
+<html>

@@ -1,0 +1,47 @@
+{% block content %}
+{% load static %}
+    <!-- content-area 시작 -->
+    <div class="content-area">
+        <!-- 카페등록 페이지 내용 시작 -->
+        <article class="page-content">
+            <div class="grid">
+                <header>
+                    <h1>카페등록</h1>
+                </header>
+                <form method="post" action="" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-row-content">
+                            <span class="form-row-label">관광지 위치</span>
+                            <div class="form-row-input">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label class="form-row-content">
+                            <span class="form-row-label">이름</span>
+                            <div class="form-row-input">
+                                <input type="text" name="name" required>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <label class="form-row-content">
+                            <span class="form-row-label">소개</span>
+                            <div class="form-row-input">
+                                <textarea cols="70" rows="10" name="contents" required></textarea>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="form-row form-row-btn-con">
+                        <input type="submit" value="등록하기" class="btn big-btn cafe-write-btn">
+                    </div>
+                </form>
+            </div>
+        </article>
+        <!-- 카페등록 페이지 내용 끝 -->
+    </div>
+    <!-- content-area 끝 -->
+{% endblock content %}

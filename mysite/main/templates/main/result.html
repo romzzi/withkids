@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style tyle="text/css">
+        @font-face {
+            font-family: "GmarketSansBold";
+            src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "NEXON Lv1 Gothic OTF";
+            src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+            format("woff");
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            color: #000;
+            font-family: "NEXON Lv1 Gothic OTF";
+        }
+        .headA_logo {
+            text-align: center;
+        }
+        .headA_logo img {
+            width: 100px;
+        }
+        .content {
+            text-align: center;
+        }
+        .images{
+            width: 100%;
+        }
+        .destination_name {
+            margin-top: 50px;
+            font-weight: bold;
+            font-size: 110%;
+        }
+        .destination_content {
+            margin-top: 30px;
+            font-size: 90%;
+        }
+    </style>
+        
+</head>
+<body>
+    {% load static %}
+    {% if destination_answer %}
+</head>
+<body>
+   {% load static %}
+   <header>
+      <div class="headA">
+         <div class="headA_logo">
+            <a href="/">
+               <img src="{% static 'images/logo.png' %}" alt="">
+            </a>
+         </div>
+      </div>      
+   </header>
+    <div class="content">
+        <img class="images" src="{{ destination_answer.main_pic }}" alt="">
+        <div class="destination_name">{{ destination_answer.name }}</div>
+        <div class="destination_content">{{ destination_answer.content }}</div>
+        <a href="{{ destination_answer.wiki }}" target="_balnk">
+            <p>{{ destination_answer.wiki }}</p>
+         </a>
+    </div>
+    {% endif %}
+    <div class="livere">
+        <!-- 라이브리 시티 설치 코드 -->
+        <div id="lv-container" data-id="city" data-uid="MTAyMC81NTYyNy8zMjA5NA==">
+            <script type="text/javascript">
+            (function(d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+
+                if (typeof LivereTower === 'function') { return; }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+            </script>
+        <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+        </div>
+    <!-- 시티 설치 코드 끝 -->
+    </div>
+</body>
+</html>

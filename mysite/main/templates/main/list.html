@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>destination</title>
+</head>
+<body>
+  <h1>destination list</h1>
+  {% load static %}
+  <table>
+    {% if board_list %}
+      {% for data in board_list %}
+      <img class="images" src="{{ data.main_pic }}" alt="">
+      {% endfor %}
+    {% endif %}
+    {% for destination in destinations %}
+    <tr onclick="location.href='/destination/{{ destination.pk }}'">
+      <td>{{ destination.name }}</td>
+      <td>{{ destination.content }}</td>
+      <td>{{ destination.published_date }}</td>
+      <td>{{ destination.modified_date }}</td>
+    </tr>
+    {% endif %}
+  </table>
+</body>
+</html>

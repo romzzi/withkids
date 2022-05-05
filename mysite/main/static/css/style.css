@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+
+@font-face {
+    font-family: "GmarketSansBold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NEXON Lv1 Gothic OTF";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    color: #000;
+    font-family: "NEXON Lv1 Gothic OTF";
+}
+
+.footA img {
+    text-align: center;
+}
+
+.footA h2 {
+    text-align: center;
+}

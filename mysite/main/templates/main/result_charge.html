@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이랑 나들이</title>
+    <style tyle="text/css">
+        @font-face {
+           font-family: "GmarketSansBold";
+           src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format('woff');
+           font-weight: normal;
+           font-style: normal;
+        }
+        @font-face {
+           font-family: "NEXON Lv1 Gothic OTF";
+           src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+              format("woff");
+           font-weight: normal;
+           font-style: normal;
+        }
+        body {
+           width: 100%;
+           color: #000;
+           font-family: "NEXON Lv1 Gothic OTF";
+        }
+        .headA_logo {
+         text-align: center;
+      }
+      .headA_logo img {
+         width: 100px;
+      }
+      .headA_search {
+         position: relative;
+         text-align: center;
+         margin: 0 auto;
+         padding-bottom: 50px;
+         width: 300px;
+      }
+      .form-control_mr-sm-2 {
+         width: 100%;
+         border-radius: 20px;
+         border: 1px solid #bbb;
+         margin: 10px 0;
+         padding: 10px 12px;
+      }
+      .form-inline_my-2_my-lg-0 {
+         padding-top: 30px;
+      }
+      .btn_submit{
+         position: absolute;
+         width: 8%;
+         height: 15%;
+         padding-top: 28px;
+         right: 35px;
+         top: 20px;
+         margin: 0;
+      }
+      .button {
+         padding-top: 50px;
+         text-align: center;
+      }
+      .Contents {
+         text-align: center;
+      }
+      .images {
+         width: 65%;
+      }  
+      .name {
+         font-size: 110%;
+         margin-bottom: 2%;
+         text-align: center;
+         padding-top: 20px;
+      }
+      .content {
+         font-size: 90%;
+      }
+      .pagination {
+         text-align: center;
+         margin-top: 7%;
+         margin-bottom: 10%;
+         margin-left: 40%;
+      }
+      
+    </style>
+</head>
+<body>
+    {% load static %}
+   <header>
+      <div class="headA">
+         <div class="headA_logo">
+            <a href="/">
+               <img src="{% static 'images/logo.png' %}" alt="">
+            </a>
+         </div>
+         <div class="headA_search">
+            <form class="form-inline_my-2_my-lg-0" action="{% url 'search' %}" method="post">
+                  {% csrf_token %}
+               <input class="form-control_mr-sm-2" type="search" placeholder="검색어를 입력하세요." aria-label="Search" name="q" value="{{q}}">
+               <input class="btn_submit" TYPE="IMAGE" src="{% static 'images/search_icon.png' %}" name="Submit" value="Submit">
+            </form>
+            <img src="" alt="">
+         </div>
+      </div>      
+   </header>
+    {% block content %}
+        {% if result_charge_list %}
+            {% for data in result_charge_list %}
+            <div class="box">
+                <div class="button">
+                   <a href="{{ data.pk }}" style="text-decoration:none">   
+                      <img class="images" src="{{ data.main_pic }}" alt="">
+                      <div class="Contents">
+                         <div class="name">{{ data.name }}</div>
+                         <div class="content">{{ data.content }}</div>
+                      </div>
+                   </a>
+               </div>
+             </div>
+            {% endfor %}
+        {% endif %}
+    {% endblock %}
+<!-- 페이징처리 시작 -->
+<div class="pagination">     
+    <div style="width:35%; margin: 5px;">
+    {% if result_charge_list.has_previous %}
+        <a class="abutton" href="?page=1" style="text-decoration:none">맨 앞으로</a>
+        <a class="abutton" href="?page={{ result_charge_list.previous_page_number }}" style="text-decoration:none">이전</a>
+    {% endif %}
+    </div>
+
+    <div style="width:30%; margin: 5px;">
+    {% for page in result_charge_list.paginator.page_range %}
+        {% if page >= result_charge_list.number|add:-2 and page <= result_charge_list.number|add:2 %}
+        <span class="{% if page == result_charge_list.number %}current{% endif %}">
+            <a href="?page={{ page }}" style="text-decoration:none">{{ page}}</a>
+        </span>
+        {% elif page >= result_charge_list.number|add:-3 and page <= result_charge_list.number|add:3 %}
+            ..
+        {% endif %}
+    {% endfor %}
+    </div>
+
+    <div style="width:35%; margin: 5px;">
+    {% if result_charge_list.has_next %}
+        <a class="abutton" href="?page={{ result_charge_list.next_page_number }}" style="text-decoration:none">다음</a>
+        <a class="abutton" href="?page={{ result_charge_list.paginator.num_pages }}" style="text-decoration:none">맨 뒤로</a>
+    {% endif %}
+    </div>
+</div>  
+<!-- 페이징처리 끝 -->
+</body>
+</html>
