@@ -3,8 +3,11 @@
 개인프로젝트로 진행하였습니다.
 
 기한 2022.01~2022.03
+
 툴 django, html, css, Figma
+
 역할 기획, 디자인, 프론트엔드, 백엔드
+
 기여도 100%
 
 <img src="https://user-images.githubusercontent.com/78775910/166889959-839600b7-9433-4bc4-bd30-1fc490f2a180.png"/>
